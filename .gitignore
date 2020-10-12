@@ -1,0 +1,15 @@
+#Archivos a ser ignorados
+*.ini
+bin/
+obj/
+Debug/
+*.cache
+*.suo
+*.suo
+*.dll
+*.dll
+*.Designer.cs
+*sln
+*resx
+/Properties/
+*.csproj
