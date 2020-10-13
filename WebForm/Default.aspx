@@ -43,10 +43,8 @@
 
     <% foreach (Dominio.Articulos item in listaArticulos)
         {%>
-    <div class=" col-md-3">
-
-        <%for (int i = 0; i < 1; i++)
-            {%>
+            <div class ="row">
+            <div class=" col-md-3">
                 <div class="card" <%--style="width: 18rem;"--%>>
                     <img src="<%=item.Imagen %>" class="card-img-top img-fliud" alt="Card image">
                     <div class="card-body">
@@ -55,9 +53,8 @@
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-                <%break; %>
-        <%} %>
-    </div>
+            </div>
+            </div>
         <%} %>
     
 
