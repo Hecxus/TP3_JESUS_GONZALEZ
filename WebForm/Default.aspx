@@ -1,13 +1,14 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebForm._Default" %>
+﻿<%@ Page Title=" " Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebForm._Default" %>
+
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+    <%--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />--%>
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <h1>Mi Tienda</h1>
+        <%--<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>--%>
     </div>
-
+    <%--
     <div class="row">
         <div class="col-md-4">
             <h2>Getting started</h2>
@@ -37,6 +38,27 @@
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
             </p>
         </div>
+    </div>--%>
+    <%--<asp:GridView ID="dgvArticulo" runat="server"></asp:GridView>--%>
+
+    <% foreach (Dominio.Articulos item in listaArticulos)
+        {%>
+    <div class=" col-md-3">
+
+        <%for (int i = 0; i < 1; i++)
+            {%>
+                <div class="card" <%--style="width: 18rem;"--%>>
+                    <img src="<%=item.Imagen %>" class="card-img-top img-fliud" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=item.Nombre%></h5>
+                        <p class="card-text"><% =item.Descripcion %></p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <%break; %>
+        <%} %>
     </div>
+        <%} %>
+    
 
 </asp:Content>
