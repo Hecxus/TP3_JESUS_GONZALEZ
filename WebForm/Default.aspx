@@ -2,60 +2,39 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <%--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />--%>
-    <div class="jumbotron">
-        <h1>Mi Tienda</h1>
-        <%--<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>--%>
-    </div>
-    <%--
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>--%>
-    <%--<asp:GridView ID="dgvArticulo" runat="server"></asp:GridView>--%>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <div class ="container">
 
-    <% foreach (Dominio.Articulos item in listaArticulos)
-        {%>
-            <div class ="row">
-            <div class=" col-md-3">
-                <div class="card" <%--style="width: 18rem;"--%>>
-                    <img src="<%=item.Imagen %>" class="card-img-top img-fliud" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title"><%=item.Nombre%></h5>
-                        <p class="card-text"><% =item.Descripcion %></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            </div>
-        <%} %>
+    <%--<div class="jumbotron">
+        <h1>Mi Tienda</h1>
+    </div>--%>
+
+    <%--<asp:GridView ID="dgvArticulo" runat="server"></asp:GridView>--%>
     
+    <section class ="container-section-articulos">
+    <div class ="row">
+        <div class ="col-md-12">
+            <article class ="panel-articulos">
+                <div class ="card-columns">
+        <% foreach (var articulos in listaArticulos )
+        {%>
+           <div class="card" style="width: 18rem;">
+                 <img src="<%=articulos.Imagen %>" class="card-img-top img-fliud" alt="Card image">
+                      <div class="card-body">
+                        <h5 class="card-title"><%=articulos.Nombre%></h5>
+                           <p class="card-text"><% =articulos.Descripcion %></p>
+                              <p class="card-text">$<% =articulos.Precio %></p> 
+                              <a href="#" class="btn btn-primary">Añadir a Carrito</a>
+                      </div>
+           </div>
+              
+                
+        <%} %>
+             </div>
+            </article>
+        </div>
+    </div>
+    </section>
+    </div>
 
 </asp:Content>
