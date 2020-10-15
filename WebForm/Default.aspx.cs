@@ -16,9 +16,17 @@ namespace WebForm
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            //dgvArticulo.DataSource = negocio.listar();
-            //dgvArticulo.DataBind();
-            listaArticulos = negocio.listar();
+            try
+            {
+                listaArticulos = negocio.listar();
+                //Session.Add("agregdado", e.ToString());
+                //Response.Redirect("Carrito.aspx");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
+
     }
 }

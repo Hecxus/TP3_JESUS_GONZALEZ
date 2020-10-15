@@ -19,16 +19,15 @@
         <% foreach (var articulos in listaArticulos )
         {%>
            <div class="card" style="width: 18rem;">
-                 <img src="<%=articulos.Imagen %>" class="card-img-top img-fliud" alt="Card image">
-                      <div class="card-body">
-                        <h5 class="card-title"><%=articulos.Nombre%></h5>
-                           <p class="card-text"><% =articulos.Descripcion %></p>
-                              <p class="card-text">$<% =articulos.Precio %></p> 
-                              <a href="#" class="btn btn-primary">Añadir a Carrito</a>
-                      </div>
+             <img src="<%=articulos.Imagen %>" class="card-img-top img-fliud" alt="Card image">
+               <div class="card-body">
+                 <h5 class="card-title"><%=articulos.Nombre%></h5>
+                    <p class="card-text"><% =articulos.Descripcion %></p>
+                    <p class="card-text">$<% =articulos.Precio %></p> 
+                    <a href="Carrito.aspx?id=<%= articulos.ID.ToString() %> " class="btn btn-primary">Añadir a Carrito</a>
+               </div>
            </div>
-              
-                
+
         <%} %>
              </div>
             </article>
