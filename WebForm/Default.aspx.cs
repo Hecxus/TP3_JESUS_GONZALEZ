@@ -12,15 +12,14 @@ namespace WebForm
     public partial class _Default : Page
     {
         public List<Articulos> listaArticulos { get; set; }
-
+    
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
                 listaArticulos = negocio.listar();
-                //Session.Add("agregdado", e.ToString());
-                //Response.Redirect("Carrito.aspx");
+                
             }
             catch (Exception)
             {
