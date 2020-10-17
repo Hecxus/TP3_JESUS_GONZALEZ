@@ -25,16 +25,17 @@ namespace WebForm
                 int idAux = Convert.ToInt32(Request.QueryString["id"]);
                 Aux = listAux.Find(x => x.ID == idAux);
 
-                if (Session["articulosAdd"] != null )
+                if (Session["articulosAdd"] == null )
+                {
+                    listaArticulos = new List<Articulos>();
+                    Session.Add("articulosAdd", listaArticulos);
+                    
+                }
+                else
                 {
                     listaArticulos = (List<Articulos>)Session["articulosAdd"];
                     listaArticulos.Add(Aux);
                     Session["articulosAdd"] = listaArticulos;
-                }
-                else
-                {
-                    listaArticulos = new List<Articulos>();
-                    Session.Add("articulosAdd", listaArticulos);
                 }
 
             }
