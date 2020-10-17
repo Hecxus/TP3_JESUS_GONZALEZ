@@ -22,6 +22,7 @@
                       <th scope="row"><img width="30" height="30" src="<%=articulos.Imagen %>"" alt="image"></th>
                       <td> <%=articulos.Nombre%></td>  
                       <td>$<%=articulos.Precio %></td>
+                      <td>#</td>
                       <td></td>
                     </tr>
                 </tbody>
