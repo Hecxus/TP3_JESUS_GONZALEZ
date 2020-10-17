@@ -1,0 +1,18 @@
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TrabajoPracticoLab3\Dominio\bin\Debug\Dominio.dll
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TrabajoPracticoLab3\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TrabajoPracticoLab3\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TrabajoPracticoLab3\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TrabajoPracticoLab3\Dominio\obj\Debug\Dominio.dll
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TrabajoPracticoLab3\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TP4-WebForm\Dominio\bin\Debug\Dominio.dll
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TP4-WebForm\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TP4-WebForm\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TP4-WebForm\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TP4-WebForm\Dominio\obj\Debug\Dominio.dll
+C:\Users\Carlos Alfredo Jesus\Desktop\TUSSI-UTN\2DO.año\UTN 2 II\PROG 3\TP4-WebForm\Dominio\obj\Debug\Dominio.pdb
+C:\Users\MatiasGonzalez\Desktop\TP4-WebForm - copia\Dominio\bin\Debug\Dominio.dll
+C:\Users\MatiasGonzalez\Desktop\TP4-WebForm - copia\Dominio\bin\Debug\Dominio.pdb
+C:\Users\MatiasGonzalez\Desktop\TP4-WebForm - copia\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\MatiasGonzalez\Desktop\TP4-WebForm - copia\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\MatiasGonzalez\Desktop\TP4-WebForm - copia\Dominio\obj\Debug\Dominio.dll
+C:\Users\MatiasGonzalez\Desktop\TP4-WebForm - copia\Dominio\obj\Debug\Dominio.pdb
