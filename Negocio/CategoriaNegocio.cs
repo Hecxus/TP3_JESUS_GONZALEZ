@@ -11,7 +11,7 @@ namespace Negocio
     public class CategoriaNegocio
     {
 
-        string rutaBaseDatos = "data source = CAJS0718; initial catalog = CATALOGO_DB; integrated security = sspi";
+        string rutaBaseDatos = "data source = MATIASLENOVO\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi";
         public List<Categoria> listar()
         {
             SqlConnection conexion = new SqlConnection();
