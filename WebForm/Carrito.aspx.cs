@@ -22,6 +22,7 @@ namespace WebForm
         {
 
             ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:evaluarBotonCompra(); ", true);
+            
 
 
             if (Session["carrito"] == null)
@@ -65,6 +66,7 @@ namespace WebForm
             //{
             //    throw;
             //}
+            CalcularTotal();
 
         }
 
@@ -79,8 +81,25 @@ namespace WebForm
         public string EvaluarBotonCompra()
         {
             if (listaArticulos.Count > 0)
+            {
+
+                lblSinElementos.Visible = false;
                 return "true";
+            }
+            lblSinElementos.Visible = true;
             return "false";
+        }
+        void CalcularTotal()
+        {
+            float total = 0;
+            if (listaArticulos!=null)
+            { 
+               foreach (Articulos articulo in listaArticulos)
+                {
+                    total += articulo.Precio;
+                }
+            }
+            lblTotal.Text = "El valor total es: "+total.ToString();
         }
     }
 }

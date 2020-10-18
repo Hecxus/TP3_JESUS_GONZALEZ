@@ -15,9 +15,13 @@
                 btnComprar.disabled = true;
             }
             //alert(bool);
+
         }
+       
+
     </script>
 
+    
     <article class ="panel-articulos">
     <table class="table">
     <thead class="thead-dark">
@@ -25,7 +29,7 @@
           <th scope="col"> </th>
           <th scope="col">Nombre</th>
           <th scope="col">Precio</th>
-          <th scope="col">Cantidad</th>
+          <%--<th scope="col">Cantidad</th>--%>
           <th scope="col">Total</th>
         </tr>
     </thead>
@@ -39,14 +43,17 @@
                       <th scope="row"><img width="30" height="30" src="<%=articulos.Imagen %>"" alt="image"></th>
                       <td> <%=articulos.Nombre%></td>  
                       <td>$<%=articulos.Precio %></td>
-                      <td>#Boton eliminar?</td>
-                      <td><a href="Carrito.aspx?deleteid=<%= articulos.ID.ToString() %> " class="btn btn-primary" onclick="evaluarBotonCompra()">X</a></td>
+                      <%--<td>#Boton eliminar?</td>--%>
+                      <td><a href="Carrito.aspx?deleteid=<%= articulos.ID.ToString() %> " class="btn btn-primary"  onclick="evaluarBotonCompra()">X</a></td>
                     </tr>
                 </tbody>
-        <%} %>/>
+        <%} %>
     </table>
+        <div> <asp:Label ID="lblSinElementos" runat="server" Text="No se ha agregado ningun elemento al carrito aun." style="display:block; text-align:center;"></asp:Label></div>
+        <div>
 
-        <asp:Button ID="btnComprar" runat="server" Text="Button"  />
-        
+        <asp:Label ID="lblTotal" runat="server" Text=" x " style="display:block; text-align:right;"></asp:Label>
+        <asp:Button ID="btnComprar" runat="server" Text="Comprar" style="display:block; text-align:right;" />
+        </div>
     </article>
 </asp:Content>
