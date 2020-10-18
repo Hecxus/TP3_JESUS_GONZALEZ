@@ -21,6 +21,8 @@ namespace WebForm
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            ClientScript.RegisterStartupScript(GetType(), "Javascript", "javascript:evaluarBotonCompra(); ", true);
+
 
             if (Session["carrito"] == null)
             {
@@ -28,10 +30,15 @@ namespace WebForm
             }
             else
             {
-                carrito = (CarritoNegocio)Session["carrito"];
+                // Cada vez que se ingresa a la pagina carrito se actualiza la variable de lista con los articulos
+                carrito = (CarritoNegocio)Session["carrito"];  
                 listaArticulos = carrito.GetListaArticulos();
             }
 
+            if (Request.QueryString["deleteid"]!=null)
+            {
+                BorrarPorId(Convert.ToInt32(Request.QueryString["deleteid"]));
+            }
             //ArticuloNegocio negocio = new ArticuloNegocio();
             //List<Articulos> listAux;
             //try
@@ -59,6 +66,21 @@ namespace WebForm
             //    throw;
             //}
 
+        }
+
+        void BorrarPorId(int i)
+        {
+            int index = -1;
+            index = carrito.GetListaArticulos().FindIndex(x => x.ID == i);
+            if (index != -1) 
+                carrito.GetListaArticulos().RemoveAt(index);
+        }
+
+        public string EvaluarBotonCompra()
+        {
+            if (listaArticulos.Count > 0)
+                return "true";
+            return "false";
         }
     }
 }

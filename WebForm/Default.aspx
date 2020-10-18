@@ -2,16 +2,12 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+    <%--  --%>
+    <div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <div class ="container">
-
-    <script>
-        function ScriptPrueba(articulos) {
-      alert("nombre");
-
-    }
-    </script>
-
+        
     <%--<div class="jumbotron">
         <h1>Mi Tienda</h1>
     </div>--%>
@@ -49,5 +45,6 @@
     </div>
 
     </div>
+    <%--</div>--%>
 
 </asp:Content>

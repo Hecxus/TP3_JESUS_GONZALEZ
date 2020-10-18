@@ -24,7 +24,7 @@ namespace WebForm
             {
                 carrito = (CarritoNegocio)Session["carrito"];
             }
-            //listaArticulos = carrito.GetListaArticulos();
+            
 
             // Muestra en la pagina Default la lista de articulos disponibles en la base
             ArticuloNegocio negocio = new ArticuloNegocio();
