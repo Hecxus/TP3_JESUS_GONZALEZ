@@ -11,14 +11,26 @@ namespace WebForm
 {
     public partial class _Default : Page
     {
-        public List<Articulos> listaArticulos { get; set; }
-    
+        public List<Articulos> articulosAMostrar { get; set; }
+        public CarritoNegocio carrito { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Obtiene el carrito, si no fue generado antes, lo genera y adhiere a la sesion
+            if (Session["carrito"]==null)
+            {
+                carrito = new CarritoNegocio();
+                Session.Add("carrito", carrito);
+            } else
+            {
+                carrito = (CarritoNegocio)Session["carrito"];
+            }
+            //listaArticulos = carrito.GetListaArticulos();
+
+            // Muestra en la pagina Default la lista de articulos disponibles en la base
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                listaArticulos = negocio.listar();
+                articulosAMostrar = negocio.listar();
                 
             }
             catch (Exception)
@@ -26,6 +38,15 @@ namespace WebForm
                 throw;
             }
         }
+
+        protected void Agregar_Click(object sender, EventArgs e)
+        {
+            //Button btn = (Button)sender;
+            ////string Value1 = btn.CommandArgument.ToString();
+            //string Value1 = btn.Attributes["CustomParameter"].ToString();
+            //throw new Exception(Value1);
+        }
+
 
     }
 }

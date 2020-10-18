@@ -22,7 +22,7 @@ namespace WebForm
             try
             {
                 listAux = negocio.listar();
-                int idAux = Convert.ToInt32(Request.QueryString["id"]);
+                int idAux = Convert.ToInt32(Request.QueryString["id"]); // esto
                 Aux = listAux.Find(x => x.ID == idAux);
 
                 if (Session["articulosAdd"] == null )

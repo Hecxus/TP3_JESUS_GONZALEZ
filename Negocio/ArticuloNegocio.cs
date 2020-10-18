@@ -36,7 +36,7 @@ namespace Negocio
 
 
                 try {aux.codArticulo = lector.GetString(1); 
-                }catch (Exception E)
+                }catch (Exception)
                 {aux.codArticulo = "Sin codigo";}
                 
                 aux.Nombre = lector.GetString(2);
@@ -63,7 +63,7 @@ namespace Negocio
                 {
                     aux.Imagen = (string)lector["ImagenUrl"];
                 }
-                catch (Exception E)
+                catch (Exception)
                 {
 
                 }
@@ -101,7 +101,7 @@ namespace Negocio
                 {
                     aux.codArticulo = lector.GetString(1);
                 }
-                catch (Exception E)
+                catch (Exception)
                 { aux.codArticulo = "Sin codigo"; }
 
                 aux.Nombre = lector.GetString(2);
@@ -122,7 +122,7 @@ namespace Negocio
                 {
                     aux.Imagen = (string)lector["ImagenUrl"];
                 }
-                catch (Exception E)
+                catch (Exception)
                 {
 
                 }
@@ -201,6 +201,61 @@ namespace Negocio
             {
                 return false;
             }
+        }
+
+        public Articulos BuscarArticuloPorId(int id)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            Articulos articulo = new Articulos();
+
+            conexion.ConnectionString = rutaBaseDatos;
+            comando.CommandType = System.Data.CommandType.Text;
+            //SELECT id,codigo,Nombre, descripcion,idMarca,idCategoria, ImagenUrl FROM ARTICULO
+            comando.CommandText = "SELECT id,codigo,Nombre, descripcion,idMarca,idCategoria,precio,  ImagenUrl FROM ARTICULOS WHERE ID="+id;
+            comando.Connection = conexion;
+
+            conexion.Open();
+            lector = comando.ExecuteReader();
+
+            if (lector.Read())
+            {
+                articulo.ID = lector.GetInt32(0);
+
+                try
+                {
+                    articulo.codArticulo = lector.GetString(1);
+                }
+                catch (Exception)
+                { articulo.codArticulo = "Sin codigo"; }
+
+                articulo.Nombre = lector.GetString(2);
+
+                try
+                {
+                    articulo.Descripcion = lector.GetString(3);
+                }
+                catch { articulo.Descripcion = "Sin descripcion"; }
+
+
+
+                articulo.categoria = new CategoriaNegocio().obtenerCategoria(lector.GetInt32(4));
+                articulo.marca = new MarcaNegocio().obtenerMarca(lector.GetInt32(5));
+                articulo.Precio = (float)lector.GetDecimal(6);
+
+                try
+                {
+                    articulo.Imagen = (string)lector["ImagenUrl"];
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            lector.Close();
+            conexion.Close();
+            return articulo;
         }
     }
 }

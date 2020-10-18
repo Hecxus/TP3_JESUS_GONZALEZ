@@ -1,6 +1,10 @@
 ﻿<%@ Page Title="Carrito" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Carrito.aspx.cs" Inherits="WebForm.WebForm1" %>
 
+
+
 <asp:Content ID="Carrito" ContentPlaceHolderID="MainContent" runat="server">
+
+
     <article class ="panel-articulos">
     <table class="table">
     <thead class="thead-dark">
@@ -17,7 +21,7 @@
           {%>
                 
                 <%--<table class="table  table-striped">--%>
-                <tbody>
+                <tbody >
                     <tr>
                       <th scope="row"><img width="30" height="30" src="<%=articulos.Imagen %>"" alt="image"></th>
                       <td> <%=articulos.Nombre%></td>  
@@ -28,5 +32,6 @@
                 </tbody>
         <%} %>
     </table>
+        
     </article>
 </asp:Content>
