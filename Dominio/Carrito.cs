@@ -10,6 +10,12 @@ namespace Dominio
 
     public class Carrito
     {
+        public List<Articulos> listaArticulos { get; set; }
+
+        public Carrito()
+            {
+            listaArticulos = new List<Articulos>();
+            }
 
     }
 }

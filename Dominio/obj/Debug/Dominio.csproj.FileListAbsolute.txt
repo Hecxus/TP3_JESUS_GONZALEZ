@@ -16,3 +16,9 @@ C:\Users\MatiasGonzalez\Desktop\TP4-WebForm - copia\Dominio\obj\Debug\Dominio.cs
 C:\Users\MatiasGonzalez\Desktop\TP4-WebForm - copia\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\MatiasGonzalez\Desktop\TP4-WebForm - copia\Dominio\obj\Debug\Dominio.dll
 C:\Users\MatiasGonzalez\Desktop\TP4-WebForm - copia\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Matias\Desktop\Tp3\Dominio\bin\Debug\Dominio.dll
+C:\Users\Matias\Desktop\Tp3\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Matias\Desktop\Tp3\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Matias\Desktop\Tp3\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Matias\Desktop\Tp3\Dominio\obj\Debug\Dominio.dll
+C:\Users\Matias\Desktop\Tp3\Dominio\obj\Debug\Dominio.pdb

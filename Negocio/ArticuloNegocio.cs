@@ -12,7 +12,7 @@ namespace Negocio
 {
     public class ArticuloNegocio
     {
-        string rutaBaseDatos = "data source = MATIASLENOVO\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi";
+        string rutaBaseDatos = "data source = DESKTOP-FDLLM2V\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi";
         public List<Articulos> listar()
         {
             SqlConnection conexion = new SqlConnection();

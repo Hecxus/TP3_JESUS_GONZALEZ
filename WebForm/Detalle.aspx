@@ -2,7 +2,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
+    <script>
+        function MensajeCompra() {
+            alert("Agregado al carrito!")
+        }
+    </script>
 
 
     <section>
@@ -20,7 +24,7 @@
             <br />
         <h3 style="margin-bottom:300px">Precio: $   <%=articulo.Precio%> </h3>
 
-            <asp:Button CssClass="Button" ID="Agregar" runat="server" Text="Agregar al carrito" 
+            <asp:Button CssClass="Button" OnClick="Agregar_Click" ID="Agregar" runat="server" Text="Agregar al carrito" OnClientClick="MensajeCompra()"
                 style=" 
                   background-color: #4CAF50;
                   border: none;
@@ -30,7 +34,8 @@
                   text-decoration: none;
                   display: inline-block;
                   font-size: 16px;"/>
-            <asp:Button CssClass="Button" ID="Volver" runat="server" Text="Volver" 
+
+            <a href="Default.aspx" class="btn btn-primary"
                 style=" 
                   background-color: #4CAF50;
                   border: none;
@@ -39,7 +44,8 @@
                   text-align: center;
                   text-decoration: none;
                   display: inline-block;
-                  font-size: 16px;"/>
+                  font-size: 16px;">Volver</a>
+
 
     </div>
 

@@ -9,18 +9,24 @@ namespace Negocio
 {
     public class CarritoNegocio
     {
-        Dominio.Carrito carrito;
+        Dominio.Carrito carrito { get; set; }
 
 
-        //public CarritoNegocio ()
-        //{
-        //    carrito = new Dominio.Carrito();
-        //    carrito.listaArticulos = new List<Dominio.Articulos>;
-        //}
+        public CarritoNegocio()
+        {
+            carrito = new Dominio.Carrito();
+            //carrito.listaArticulos = new List<Dominio.Articulos>;
+        }
 
-    //    public List<ArticuloNegocio> GetListaArticulos()
-    //    {
-    //        return carrito.listaArticulos;
-    //    }
+        public List<Articulos> GetListaArticulos()
+        {
+            return carrito.listaArticulos;
+        }
+
+        public void AgregarACarrito(Articulos _articulo)
+        {
+            carrito.listaArticulos.Add(_articulo);
+           
+        }
     }
 }
