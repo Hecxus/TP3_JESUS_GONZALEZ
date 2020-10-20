@@ -30,12 +30,23 @@ namespace WebForm
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                articulosAMostrar = negocio.listar();
-                
+                if (Request.QueryString["searchText"] != null)
+                {
+                    string texto = Request.QueryString["searchText"].ToUpper();
+                    articulosAMostrar = negocio.listarConBusqueda("UPPER(nombre) like '%"+ texto +"%'");
+                }else
+                { 
+                    articulosAMostrar = negocio.listar();
+                }
+
             }
             catch (Exception)
             {
                 throw;
+            }
+            if (articulosAMostrar.Count==0)
+            {
+                lblBuscador.Text = "La busqueda no trajo resultados, pruebe otro nombre.";
             }
         }
 
@@ -47,6 +58,10 @@ namespace WebForm
             //throw new Exception(Value1);
         }
 
-
+        protected void searchButton_Click(object sender, EventArgs e)
+        {
+            string param = "~/Default.aspx?searchText=" + searchText.Text;
+            Response.Redirect(param);
+        }
     }
 }

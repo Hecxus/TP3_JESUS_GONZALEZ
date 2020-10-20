@@ -67,6 +67,12 @@ namespace WebForm
             //    throw;
             //}
             CalcularTotal();
+            if (carrito.GetListaArticulos().Count == 0)
+            { 
+                btnComprar.Visible = false;
+            btnVaciar.Visible = false;
+            }
+            
 
         }
 
@@ -100,6 +106,22 @@ namespace WebForm
                 }
             }
             lblTotal.Text = "El valor total es: "+total.ToString();
+        }
+
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+            ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Compra realizada!');", true);
+        }
+
+        protected void btnVaciar_Click(object sender, EventArgs e)
+        {
+            if (carrito.GetListaArticulos().Count!=0)
+                carrito.GetListaArticulos().Clear();
+            else
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('No hay articulos para borrar!');", true);
+
+            btnComprar.Visible = false;
+            btnVaciar.Visible = false;
         }
     }
 }

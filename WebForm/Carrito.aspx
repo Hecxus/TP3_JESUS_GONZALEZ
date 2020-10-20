@@ -30,7 +30,7 @@
           <th scope="col">Nombre</th>
           <th scope="col">Precio</th>
           <%--<th scope="col">Cantidad</th>--%>
-          <th scope="col">Total</th>
+          <th scope="col">Eliminar</th>
         </tr>
     </thead>
     
@@ -50,10 +50,12 @@
         <%} %>
     </table>
         <div> <asp:Label ID="lblSinElementos" runat="server" Text="No se ha agregado ningun elemento al carrito aun." style="display:block; text-align:center;"></asp:Label></div>
-        <div>
+ 
 
         <asp:Label ID="lblTotal" runat="server" Text=" x " style="display:block; text-align:right;"></asp:Label>
-        <asp:Button ID="btnComprar" runat="server" Text="Comprar" style="display:block; text-align:right;" />
+               <div style="display: inline-block;">
+        <asp:Button ID="btnComprar" runat="server" Text="Comprar" style="display:block; text-align:right;" OnClick="btnComprar_Click" />
+            <asp:Button ID="btnVaciar" runat="server" Text="Vaciar carrito" OnClick="btnVaciar_Click" />
         </div>
     </article>
 </asp:Content>

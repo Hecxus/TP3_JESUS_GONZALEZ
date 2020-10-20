@@ -257,5 +257,7 @@ namespace Negocio
             conexion.Close();
             return articulo;
         }
+
+
     }
 }
