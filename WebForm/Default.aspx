@@ -15,9 +15,9 @@
     <%--<asp:GridView ID="dgvArticulo" runat="server"></asp:GridView>--%>
     <div>
         <br />
-        <asp:TextBox ID="searchText" runat="server"></asp:TextBox>
+        <asp:TextBox ID="searchText" runat="server" Width="181px"></asp:TextBox>
         <asp:Button ID="searchButton" runat="server" Text="Buscar" OnClick="searchButton_Click"  />
-        <h5><asp:Label ID="lblBuscador" runat="server" Text="Utilice el buscador para buscar un articulo por su nombre"></asp:Label></h5>
+        <h5 class="color alert-light"><asp:Label ID="lblBuscador" runat="server" Text="Buscar articulo por nombre"></asp:Label></h5>
         <br />
     </div>
     <section class ="container-section-articulos">
