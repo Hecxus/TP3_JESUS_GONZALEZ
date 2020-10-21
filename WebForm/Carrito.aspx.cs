@@ -105,7 +105,7 @@ namespace WebForm
                     total += articulo.Precio;
                 }
             }
-            lblTotal.Text = "El valor total es: "+total.ToString();
+            lblTotal.Text = "El valor total es: $"+total.ToString();
         }
 
         protected void btnComprar_Click(object sender, EventArgs e)

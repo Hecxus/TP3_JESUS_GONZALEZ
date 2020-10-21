@@ -37,7 +37,7 @@
                   text-align: center;
                   text-decoration: none;
                   display: inline-block;
-                  font-size: 16px;">Volver</a>
+                  font-size: 16px;">Volver</a>&nbsp;&nbsp;&nbsp;
 
             <asp:Button CssClass="Button" OnClick="Agregar_Click" ID="Agregar" runat="server" Text="Agregar al carrito" OnClientClick="MensajeCompra()"
                 style=" 

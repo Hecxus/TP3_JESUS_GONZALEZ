@@ -40,7 +40,7 @@
                 <%--<table class="table  table-striped">--%>
                 <tbody >
                     <tr>
-                      <th scope="row"><img width="30" height="30" src="<%=articulos.Imagen %>"" alt="image"></th>
+                      <th scope="row"><img width="40" height="40" src="<%=articulos.Imagen %>"" alt="image"></th>
                       <td> <%=articulos.Nombre%></td>  
                       <td>$<%=articulos.Precio %></td>
                       <%--<td>#Boton eliminar?</td>--%>
@@ -49,15 +49,46 @@
                 </tbody>
         <%} %>
     </table>
-        <div> <asp:Label ID="lblSinElementos" runat="server" Text="No se ha agregado ningun elemento al carrito aun." style="display:block; text-align:center;"></asp:Label></div>
+        <div> 
  
 
-        <asp:Button ID="btnComprar" runat="server" Text="Comprar" style="display:block; text-align:right;" OnClick="btnComprar_Click" Width="72px" />
+        <asp:Label ID="lblTotal" runat="server" Text=" x " style="background-color: #BDC2C2; display:block; text-align:right;" Height="34px"></asp:Label>
+ 
+        <div>
+            <asp:Label ID="lblSinElementos" runat="server" Text="No se ha agregado productos al carrito aún." style="display:block; text-align:center;" Height="32px"></asp:Label>
+            <br />
+            <br />
+        <asp:Button ID="btnComprar" runat="server" Text="Comprar" OnClick="btnComprar_Click" Width="152px" 
+            style="
+            background-color: #339FFF; 
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /*display:block;*/ 
+            /*text-align:right;*/" Height="49px"/>
  
 
-        <asp:Label ID="lblTotal" runat="server" Text=" x " style="display:block; text-align:right;"></asp:Label>
                <div style="display: inline-block;">
         </div>
-                   <asp:Button ID="btnVaciar" runat="server" Text="Vaciar carrito" OnClick="btnVaciar_Click" Height="25px" />
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <asp:Button ID="btnVaciar" runat="server" Text="Vaciar carrito" OnClick="btnVaciar_Click" Height="48px" 
+                       style="
+                       background-color: #339FFF;
+                       border: none;
+                       color: white;
+                       padding: 15px 40px;
+                       text-align: center;
+                       text-decoration: none;
+                       display: inline-block;
+                       font-size: 16px;"/>
+            <br />
+            <br />
+        </div>
+        </div>
+ 
     </article>
 </asp:Content>
